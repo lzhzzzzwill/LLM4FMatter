@@ -1,10 +1,8 @@
-# GitHub Projects Associated with the Review
-
 ## Introduction
 
 This document is a companion collection of GitHub projects associated with the review. It brings together publicly available code, datasets, models, prompts, and experimental platforms from previous studies in large-language-model-assisted framework-materials research. These repositories represent the accumulated knowledge and practical contributions of the community.
 
-The organization follows Chapters 3–7 of the review. Projects are included when a paper explicitly provides them in its Data Availability, Code Availability, Supporting Information, or main text. General-purpose packages cited only as dependencies are listed separately in Appendix A.
+The organization follows Chapters 3–7 of the review. Projects are included when a paper explicitly provides them in its Data Availability, Code Availability, Supporting Information, or main text. Public web applications, online demos, and model-hub deployments mentioned by the source papers are also recorded, even when they are not GitHub repositories. General-purpose packages cited only as dependencies are listed separately in Appendix A.
 
 The same project may appear in more than one chapter when it supports multiple stages of the framework-materials research workflow. Links have been normalized to remove common line-break, spacing, capitalization, and trailing-slash inconsistencies.
 
@@ -37,6 +35,16 @@ This chapter covers extraction of synthesis conditions, entity and relation reco
 | GPT-MOF Project                     | ChatGPT-based mining of MOF synthesis and CO2-capture information | `Digital Discovery 2026, 5, 384–396`       | [GitHub](https://github.com/ai4mat-lab/GPT_MOF_Project)      |
 | LLMs-GPT-4-Cage                     | Text classification, information tabularization, and a runnable chatbot for POCs/COFs | `Digital Discovery 2025, 4, 403–410`       | [GitHub](https://github.com/syy1213/LLMs-GPT-4-Cage)         |
 | spbnet                              | Data preprocessing, pretraining, and fine-tuning for materials/chemical text modelling | `Nature Communications 2026, 17, 2618`     | [GitHub](https://github.com/tyvanzou/spbnet)                 |
+
+### Public applications and model-hub resources
+
+| Application or resource                             | Function                                                     | Source                                   | Link                                                         | Status                                                       |
+| --------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| MaterialBrain online engine                         | Online engine for literature-grounded MOF synthesis extraction, structure inference, and synthesis guidance | `J. Chem. Inf. Model. 2026, 66, 228–245` | [Web application](https://materialbrain.com)                 | Public demo explicitly reported by the paper                 |
+| MOF synthesis extraction online engine and database | Online executable engine and database for the large-scale synthesis data produced in the study | `J. Chem. Inf. Model. 2026, 66, 228–245` | Not specified in the paper                                   | Application explicitly mentioned; no stable public URL was provided |
+| TWA–Marie web demo                                  | Natural-language and field-based access to zeolite and crystallographic knowledge through the The World Avatar knowledge graph | `Digital Discovery 2024, 3, 2070–2081`   | [Web demo](https://theworldavatar.io/demos/marie/)           | Public web interface explicitly reported by the paper        |
+| BERT-base-uncased                                   | Retrieval encoder used for few-shot example selection in the MaterialBrain workflow | `J. Chem. Inf. Model. 2026, 66, 228–245` | [Hugging Face model](https://huggingface.co/google-bert/bert-base-uncased) | Supporting model, not an author-developed application        |
+| all-MiniLM-L6-v2                                    | Sentence-embedding model used for retrieval in the MaterialBrain workflow | `J. Chem. Inf. Model. 2026, 66, 228–245` | [Hugging Face model](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) | Supporting model, not an author-developed application        |
 
 ## Chapter 5. Experiment Assistance and Human–AI Collaboration
 
@@ -74,6 +82,13 @@ This chapter focuses on task decomposition, tool selection, state management, da
 | Eunomia                        | Natural-language interaction and tool calling for chemical discovery | `Digital Discovery 2024, 3, 2607–2617`                 | [GitHub](https://github.com/AI4ChemS/Eunomia)                |
 | MOFh6                          | Framework-materials agent and knowledge-processing project   | `Transactions of Materials Research 2026, 2, 100176`   | [GitHub](https://github.com/lzhzzzzwill/MOFh6)               |
 
+### Public deployments and related portals
+
+| Application or resource    | Function                                                     | Source                                               | Link                                                         | Status                                            |
+| -------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| MOFh6 Hugging Face Space   | Browser-accessible deployment of the MOFh6 dialogue, structure-visualization, and CIF-service application | `Transactions of Materials Research 2026, 2, 100176` | [Hugging Face Space](https://huggingface.co/spaces/Willlzh/MOFh6) | Space deployment explicitly reported by the paper |
+| MOFGen public project page | Public Materials Project page containing the MOFGen database, DFT calculations, and structure-visualization resources | `arXiv:2504.14110`                                   | [Materials Project](https://next-gen.materialsproject.org/contribs/projects/MOFGen) | Public portal explicitly reported by the source   |
+
 ### Framework-materials tools
 
 | Tool             | Function                                              | Source                                                       | Link                                                    |
@@ -99,51 +114,11 @@ This chapter covers the transition from model recommendations to real or semi-au
 | TCP-IP-4Axis-Python     | Dobot MG400 robotic-arm control interface                    | `J. Am. Chem. Soc. 2025, 147, 23014–23025` | [GitHub](https://github.com/Dobot-Arm/TCP-IP-4Axis-Python)   |
 | Commanduino             | Instrument-control framework used in automated experiments   | `J. Am. Chem. Soc. 2025, 147, 23014–23025` | [GitHub](https://github.com/croningp/commanduino)            |
 
-## Appendix A. General Dependencies and Tools
+### Public application deployments
 
-These projects are cited mainly as general-purpose libraries, frameworks, or reference tools, rather than as the core repositories released by the authors of the corresponding studies.
+| Application or resource     | Function                                                     | Source                                               | Link                                                         | Status                                             |
+| --------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- |
+| MOFh6 Hugging Face Space    | Deployed interface for natural-language MOF queries, CIF retrieval, and structure visualization | `Transactions of Materials Research 2026, 2, 100176` | [Hugging Face Space](https://huggingface.co/spaces/Willlzh/MOFh6) | Public deployment explicitly reported by the paper |
+| MaterialBrain online engine | Online interface connecting literature mining, structure inference, Bayesian optimization, and synthesis guidance | `J. Chem. Inf. Model. 2026, 66, 228–245`             | [Web application](https://materialbrain.com)                 | Public demo explicitly reported by the paper       |
 
-| Tool           | Function                                                     | Link                                                        |
-| -------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| LangChain      | LLM application and tool-calling framework                   | [GitHub](https://github.com/langchain-ai/langchain)         |
-| LangGraph      | Stateful agent-workflow orchestration                        | [GitHub](https://github.com/langchain-ai/langgraph)         |
-| Chroma         | Vector database and retrieval component                      | [GitHub](https://github.com/chroma-core/chroma)             |
-| DSPy           | Programmatic prompt and LLM-pipeline optimization            | [GitHub](https://github.com/stanfordnlp/dspy)               |
-| ColBERT        | Retrieval and reranking model                                | [GitHub](https://github.com/stanford-futuredata/ColBERT)    |
-| PaperQA        | Scientific-literature question answering and retrieval       | [GitHub](https://github.com/whitead/paper-qa)               |
-| RDKit          | Cheminformatics toolkit                                      | [GitHub](https://github.com/rdkit/rdkit)                    |
-| CGCNN          | Crystal graph convolutional neural-network baseline          | [GitHub](https://github.com/txie-93/cgcnn)                  |
-| scikit-learn   | Machine-learning toolkit                                     | [GitHub](https://github.com/scikit-learn/scikit-learn)      |
-| SELFIES        | Molecular string representation                              | [GitHub](https://github.com/aspuru-guzik-group/selfies)     |
-| BIG-bench      | General-purpose LLM evaluation framework                     | [GitHub](https://github.com/google/BIG-bench)               |
-| EMMO           | Materials-science ontology                                   | [GitHub](https://github.com/emmo-repo/EMMO)                 |
-| TheWorldAvatar | Chemical/materials knowledge graphs and agent infrastructure | [GitHub](https://github.com/cambridge-cares/TheWorldAvatar) |
-
-## Appendix B. Records Requiring Manual Verification
-
-The following records contain line breaks, truncation, or spelling variants introduced during PDF-to-text conversion. They should be opened and checked before being circulated or cited as verified repositories.
-
-| Source                                     | Issue                                                    | Current handling                                      |
-| ------------------------------------------ | -------------------------------------------------------- | ----------------------------------------------------- |
-| `J. Chem. Inf. Model. 2026, 66, 228–245`   | `passingby000` was split by a PDF line break             | Recorded as `MOFs_Synthesis_Condition_Extraction`     |
-| `Nature Communications 2024, 15, 1418`     | `LBNLP/NERRE` appears with inconsistent spacing          | Normalized to `LBNLP/NERRE`                           |
-| `Digital Discovery 2026, 5, 384–396`       | `GPT_MOF_Project` and `GPT-MOF-Project` both appear      | Uses the Data Availability spelling `GPT_MOF_Project` |
-| `J. Am. Chem. Soc. 2026, 148, 7440–7449`   | Two spellings of the COF workflow repository appear      | Uses the longer repository name in `Github_study.md`  |
-| `Nature Chemistry 2025, 17, 1645`          | Organization name appears with and without a hyphen      | Uses `pic-ai-robotic-chemistry`                       |
-| `J. Am. Chem. Soc. 2025, 147, 23014–23025` | Two Dobot repository spellings appear                    | The Data Availability link should be checked manually |
-| `arXiv:2602.17902`                         | Several dependency links are truncated in extracted text | Not treated as verified core projects                 |
-| `J. Am. Chem. Soc. 2025, 147, 42016–42023` | Repository name was truncated in extracted text          | Full candidate was added from `Github_study.md`       |
-
-## Appendix C. Suggested Verification Fields
-
-| Field              | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| Paper              | Journal, year, volume/pages, or arXiv identifier             |
-| Review chapter     | Chapter 3, 4, 5, 6, or 7                                     |
-| Project name       | Name displayed by the GitHub repository                      |
-| Repository URL     | Canonical `https://github.com/owner/repository` URL          |
-| Project type       | Code, data, model, prompt, instrument control, or integrated project |
-| Author repository  | Yes / No / To be checked                                     |
-| Data included      | Yes / No / To be checked                                     |
-| Usage instructions | Yes / No / To be checked                                     |
-| Verification date  | Date on which the repository was opened and checked          |
+# This project is continuously being updated....
